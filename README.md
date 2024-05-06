@@ -117,13 +117,13 @@ bin\OpenPoseDemo.exe --image_dir examples\media --hand --write_images output\ --
 
 得到的效果如下：
 
-<img src=".\datasets\test\cloth-mask\cloth.jpg" alt="cloth" style="zoom:33%;" />
+<img src=".\datasets\test\cloth-mask\cloth.jpg" alt="cloth" width="30%" />
 
 ##### 1.3 利用获得的黑白分割图来去除衣服图片的背景
 
 得到的效果如下：
 
-<img src=".\datasets\test\cloth\cloth.jpg" alt="cloth" style="zoom:33%;" />
+<img src=".\datasets\test\cloth\cloth.jpg" alt="cloth" width="30%" />
 
 此时，我们获得了VITON-HD输入中的cloth与cloth_mask。
 
@@ -158,7 +158,7 @@ VITON-HD作者在论文中使用ACGPN中的分割模型来进行人体分割，�
 
 此时，我们已获得VITON-HD输入中的person与person_parse。
 
-<img src=".\datasets\test\image\person_00.jpg" alt="person_00" style="zoom:33%;" /><img src="F:\VITON-HD\datasets\test\image-parse\person_00.png" alt="person_00" style="zoom:33%;" />
+<img src=".\datasets\test\image\person_00.jpg" alt="person_00" width="30%" /><img src=".\datasets\test\image-parse\person_00.png" alt="person_00" width="30%" />
 
 #### 3. 姿态检测
 
