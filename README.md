@@ -56,6 +56,8 @@ pip install -r requirements.txt
 
 **注：Jetson和Raspberry Pi安装详情见[Tutorial](https://github.com/axinc-ai/ailia-models/blob/master/TUTORIAL.md)。**
 
+**注意：该ailia模型30天过期，到期需要重新申请SDK，重复上述操作。**
+
 ##### 3.姿态检测
 
 使用[Windows Portable Version](https://github.com/CMU-Perceptual-Computing-Lab/openpose/blob/master/doc/installation/0_index.md#windows-portable-demo)的OpenPose实现，按照[Windows Portable Version](https://github.com/CMU-Perceptual-Computing-Lab/openpose/blob/master/doc/installation/0_index.md#windows-portable-demo),中的步骤，下载完release后，从kaggle的库中下载openpose的模型[openpose_model | Kaggle](https://www.kaggle.com/datasets/changethetuneman/openpose-model)，然后运行‘models/getBaseModels.bat’和‘models/getCOCO_and_MPII_optional.bat’，会自动的下载相关模型。下载完成后，将我们需要的图片放在./examples/media/的文件夹下，在主目录执行以下指令：
