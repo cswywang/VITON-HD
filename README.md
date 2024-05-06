@@ -109,7 +109,7 @@ bin\OpenPoseDemo.exe --image_dir examples\media --hand --write_images output\ --
 
 衣服的原图如下：
 
-<img src=".\datasets\test\cloth\cloth.jpg" alt="cloth" style="zoom:20%;" />
+<img src=".\datasets\test\cloth\cloth.jpg" alt="cloth" width="30%" />
 
 ##### 1.2 把图片中非黑的像素都转化成白色
 
@@ -166,7 +166,7 @@ VITON-HD作者在论文中使用ACGPN中的分割模型来进行人体分割，�
 
 由此，我们获得了姿态图与json形式的关键点数据。
 
-<img src=".\datasets\test\openpose-img\person_00_rendered.png" alt="person_00_rendered" style="zoom:33%;" />
+<img src=".\datasets\test\openpose-img\person_00_rendered.png" alt="person_00_rendered" width="30%" />
 
 经历以上preprocess过程，我们们获得了VITON-HD的所有输入数据，实现了仅需输入一张有背景的人物与目标服饰图像，就可生成其换装后的图像，并且在高分辨率图像上仍有较好效果，对伪影消除较好。
 
