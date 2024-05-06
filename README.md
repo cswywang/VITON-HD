@@ -80,7 +80,7 @@ bin\OpenPoseDemo.exe --image_dir examples\media --hand --write_images output\ --
 
 运行后，其会自动修改datasets\test_pairs.txt中的人物-服装对，换装之后的结果保存为results\test\person_cloth.jpg。
 
-**注意：**在使用前，要将传入的两张图片修改为768*1024的大小，否则会出现图像尺寸不匹配问题导致报错。
+**注意**：在使用前，要将传入的两张图片修改为768*1024的大小，否则会出现图像尺寸不匹配问题导致报错。
 
 ## Principle
 
