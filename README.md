@@ -93,7 +93,7 @@ bin\OpenPoseDemo.exe --image_dir examples\media --hand --write_images output\ --
 3. 接着，利用移除衣服与手臂部分后的人体分割图像、姿势图和上一步所预测的人物穿上目标服饰之后的人体分割图像中的服装区域，通过TPS变换对目标服饰进行变形，使其更加匹配人物姿势。
 4. 最后，将上述信息整合到一起，生成最终图像，因为变换过的衣服不能百分百和模特穿在身上的衣服重叠，所以这里会有错误对齐，于是利用ALIAS（ALIgnment-Aware Segment normalization）模块，消除错误对齐的信息的影响。并且可以生成原本被衣服覆盖住的肌肤，衣服的图案，款式，花纹都可以较好的复现。并且清晰地保持了原模特的脸部，手部，裤子等，效果显著。
 
-![image-20240429194550431](F:\VITON-HD\image-20240429194550431.png)
+![image-20240429194550431](.\image-20240429194550431.png)
 
 ### Preprocess
 
@@ -109,7 +109,7 @@ bin\OpenPoseDemo.exe --image_dir examples\media --hand --write_images output\ --
 
 衣服的原图如下：
 
-<img src="F:\VITON-HD\datasets\test\cloth\cloth.jpg" alt="cloth" style="zoom:33%;" />
+<img src=".\datasets\test\cloth\cloth.jpg" alt="cloth" style="zoom:33%;" />
 
 ##### 1.2 把图片中非黑的像素都转化成白色
 
@@ -117,13 +117,13 @@ bin\OpenPoseDemo.exe --image_dir examples\media --hand --write_images output\ --
 
 得到的效果如下：
 
-<img src="F:\VITON-HD\datasets\test\cloth-mask\cloth.jpg" alt="cloth" style="zoom:33%;" />
+<img src=".\datasets\test\cloth-mask\cloth.jpg" alt="cloth" style="zoom:33%;" />
 
 ##### 1.3 利用获得的黑白分割图来去除衣服图片的背景
 
 得到的效果如下：
 
-<img src="F:\VITON-HD\datasets\test\cloth\cloth.jpg" alt="cloth" style="zoom:33%;" />
+<img src=".\datasets\test\cloth\cloth.jpg" alt="cloth" style="zoom:33%;" />
 
 此时，我们获得了VITON-HD输入中的cloth与cloth_mask。
 
@@ -158,7 +158,7 @@ VITON-HD作者在论文中使用ACGPN中的分割模型来进行人体分割，�
 
 此时，我们已获得VITON-HD输入中的person与person_parse。
 
-<img src="F:\VITON-HD\datasets\test\image\person_00.jpg" alt="person_00" style="zoom:33%;" /><img src="F:\VITON-HD\datasets\test\image-parse\person_00.png" alt="person_00" style="zoom:33%;" />
+<img src=".\datasets\test\image\person_00.jpg" alt="person_00" style="zoom:33%;" /><img src="F:\VITON-HD\datasets\test\image-parse\person_00.png" alt="person_00" style="zoom:33%;" />
 
 #### 3. 姿态检测
 
@@ -166,7 +166,7 @@ VITON-HD作者在论文中使用ACGPN中的分割模型来进行人体分割，�
 
 由此，我们获得了姿态图与json形式的关键点数据。
 
-<img src="F:\VITON-HD\datasets\test\openpose-img\person_00_rendered.png" alt="person_00_rendered" style="zoom:33%;" />
+<img src=".\datasets\test\openpose-img\person_00_rendered.png" alt="person_00_rendered" style="zoom:33%;" />
 
 经历以上preprocess过程，我们们获得了VITON-HD的所有输入数据，实现了仅需输入一张有背景的人物与目标服饰图像，就可生成其换装后的图像，并且在高分辨率图像上仍有较好效果，对伪影消除较好。
 
