@@ -93,7 +93,7 @@ bin\OpenPoseDemo.exe --image_dir examples\media --hand --write_images output\ --
 3. 接着，利用移除衣服与手臂部分后的人体分割图像、姿势图和上一步所预测的人物穿上目标服饰之后的人体分割图像中的服装区域，通过TPS变换对目标服饰进行变形，使其更加匹配人物姿势。
 4. 最后，将上述信息整合到一起，生成最终图像，因为变换过的衣服不能百分百和模特穿在身上的衣服重叠，所以这里会有错误对齐，于是利用ALIAS（ALIgnment-Aware Segment normalization）模块，消除错误对齐的信息的影响。并且可以生成原本被衣服覆盖住的肌肤，衣服的图案，款式，花纹都可以较好的复现。并且清晰地保持了原模特的脸部，手部，裤子等，效果显著。
 
-![image-20240429194550431](.\image-20240429194550431.png)
+![image-20240429194550431](VITON-HD.png)
 
 ### Preprocess
 
@@ -109,7 +109,7 @@ bin\OpenPoseDemo.exe --image_dir examples\media --hand --write_images output\ --
 
 衣服的原图如下：
 
-<img src=".\datasets\test\cloth\cloth.jpg" alt="cloth" style="zoom:33%;" />
+<img src=".\datasets\test\cloth\cloth.jpg" alt="cloth" style="zoom:20%;" />
 
 ##### 1.2 把图片中非黑的像素都转化成白色
 
